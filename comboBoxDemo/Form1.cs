@@ -16,5 +16,11 @@ namespace comboBoxDemo
         {
             InitializeComponent();
         }
+        private void comboBoxColorPicker_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ComboBox comboBox = sender as ComboBox;
+            Color nuevoColor = Color.FromName(comboBox.SelectedItem.ToString());
+            this.BackColor = nuevoColor;
+        }
     }
 }
